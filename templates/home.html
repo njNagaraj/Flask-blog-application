@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home Page</title>
-</head>
-<body>
-	<h1>Welcome to my page</h1>
-	<p>This is a sample page.</p>
-</body>
-</html>
+{%extends 'layout_template.html' %}
+{% block content %}
+  {% for post in posts %}
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.author }}</p>
+    <p>{{ post.content }}</p>
+    <p>{{ post.date_posted }}</p>
+  {% endfor %}
+{% endblock content %}
