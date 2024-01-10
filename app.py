@@ -37,13 +37,15 @@ def register_page():
     return redirect(url_for('home_page'))
   return render_template('register.html', title = 'Register', form = form)
 
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login_page():
-  form = LoginForm()
-  if form.validate_on_submit(): 
-    flash(f'Welcom {form.username.data}!', 'success')
-    return redirect(url_for('home_page'))
-  render_template('login.html', title = 'Login', form = form)
+    form = LoginForm()
+
+    if form.validate_on_submit():
+        flash(f'Welcome {form.username.data}!', 'success')
+        return redirect(url_for('home_page'))
+
+    return render_template('login.html', title='Login', form=form)
 
 if __name__ == '__main__':
   app.run(host = '0.0.0.0', debug = True)
