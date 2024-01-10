@@ -33,7 +33,7 @@ def about_page():
 def register_page():
   form = RegistrationForm()
   if form.validate_on_submit(): 
-    flash(f'Account created for {form.user_name.data}!', 'success')
+    flash(f'Account created for {form.username.data}!', 'success')
     return redirect(url_for('home_page'))
   return render_template('register.html', title = 'Register', form = form)
 
@@ -41,7 +41,7 @@ def register_page():
 def login_page():
   form = LoginForm()
   if form.validate_on_submit(): 
-    flash(f'Welcom {form.user_name.data}!', 'success')
+    flash(f'Welcom {form.username.data}!', 'success')
     return redirect(url_for('home_page'))
   render_template('login.html', title = 'Login', form = form)
 
