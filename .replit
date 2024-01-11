@@ -1,7 +1,7 @@
 modules = ["python-3.10:v18-20230807-322e88b"]
 
 hidden = [".pythonlibs"]
-run = "python flaskblog.py"
+run = "python run.py"
 
 [nix]
 channel = "stable-23_05"
@@ -10,5 +10,5 @@ channel = "stable-23_05"
 language = "python3"
 
 [deployment]
-run = ["sh", "-c", "python flaskblog.py"]
+run = ["sh", "-c", "python run.py"]
 deploymentTarget = "cloudrun"
