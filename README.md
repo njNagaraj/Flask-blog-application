@@ -12,3 +12,5 @@ Uses wtfrorms, flask_login, bcrypt.
 
 Perfectly organized the code using Layout Inheritance and
 Packages.
+
+Note : the exatra env files and lock file are not needed to run the website (these are created because i developed the project using Replit IDE  which is easy to develop projects without any system requirements).
