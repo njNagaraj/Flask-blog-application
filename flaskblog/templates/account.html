@@ -9,7 +9,7 @@
       </div>
     </div>
 
-      <form method = "POST" action = "">
+      <form method = "POST" action = "" enctype="multipart/form-data">
         {{ form.hidden_tag() }} <!--for security attacks-->
 
           <fieldset class="form-group">
@@ -45,9 +45,19 @@
                   {{ form.email(class="form-control form-control-lg") }}
               {% endif %}
           </div>
+          <div class="form-group">
+              {{ form.picture.label() }}</br>
+              {{ form.picture(class="form-control-file") }}</br>
+              {% if form.picture.errors %}
+                {% for error in form.picture.errors %}
+                  <span class="text-danger">{{ error }}</span></br>
+                {% endfor %}
+              {% endif %}
+          </div>
+          
         </fieldset>
         <div class = "form-group">
-          {{ form.submit(class = "btn btn-outline-info") }}
+          </br>{{ form.submit(class = "btn btn-outline-info") }}
         </div>
       </form>
   </div>
