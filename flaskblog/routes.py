@@ -10,24 +10,11 @@ import os
 from PIL import Image #pillow package for work with images
 
 
-posts = [
-    {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
-    },
-    {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
-    }
-  ]
 
 @app.route('/')
 @app.route('/home')
 def home_page():
+  posts = Post.query.all()
   return render_template('home.html', posts = posts)
 
 @app.route('/about')
@@ -107,6 +94,9 @@ def account_page():
 def new_post():
   form = PostForm()
   if form.validate_on_submit():
-    flash('Your post has been created!', 'success')
+    post = Post(title = form.title.data, content = form.content.data, author = current_user)
+    db.session.add(post)
+    db.session.commit()
+    flash('Posted', 'success')
     return redirect(url_for('home_page'))
   return render_template('create_post.html', title='New Post', form=form)
