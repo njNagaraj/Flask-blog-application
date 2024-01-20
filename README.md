@@ -11,6 +11,6 @@ connection.
 Uses wtfrorms, flask_login, bcrypt.
 
 Perfectly organized the code using Layout Inheritance and
-Packages.
+Packages and Blueprints
 
 Note : the exatra env directory and lock,toml,nix extension files are not needed to run the website (these are created because i developed the project using Replit IDE  which is easy to develop projects without any system requirements).
