@@ -8,7 +8,7 @@ User can create account, Login, post, see profiles.
 Uses Flask web framework, sqllite(SqlAlchemy) for database
 connection.
 
-Uses wtfrorms, flask_login, bcrypt, pillow, itsdangerous.
+Uses wtf, flask_login, bcrypt, flask-mail, pillow, itsdangerous.
 
 Perfectly organized the code using Layout Inheritance and
 Packages and Blueprints
