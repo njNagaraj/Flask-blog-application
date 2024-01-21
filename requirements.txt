@@ -5,5 +5,6 @@ Flask-Login
 Flask-Mail
 Flask-WTF
 Pillow
+email_validator
 itsdangerous==2.0.0
 gunicorn
