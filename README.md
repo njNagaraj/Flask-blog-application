@@ -5,12 +5,10 @@
 Like twitter, User can post their thought, everyone can see it,
 User can create account, Login, post, see profiles.
 
-Uses Bootstrap, Flask web framework, SqlAlchemy for database
+Uses Flask web framework, sqllite(SqlAlchemy) for database
 connection.
 
-Uses wtfrorms, flask_login, bcrypt.
+Uses wtfrorms, flask_login, bcrypt, pillow, itsdangerous.
 
 Perfectly organized the code using Layout Inheritance and
 Packages and Blueprints
-
-Note : the exatra env directory and lock,toml,nix extension files are not needed to run the website (these are created because i developed the project using Replit IDE  which is easy to develop projects without any system requirements).
