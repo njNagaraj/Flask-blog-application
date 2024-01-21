@@ -3,5 +3,6 @@ Flask-SQLAlchemy
 Flask-Bcrypt
 Flask-Login
 Flask-Mail
+Flask-WTF
 itsdangerous==2.0.0
 gunicorn
