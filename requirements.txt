@@ -3,4 +3,5 @@ Flask-SQLAlchemy
 Flask-Bcrypt
 Flask-Login
 Flask-Mail
+itsdangerous
 gunicorn
